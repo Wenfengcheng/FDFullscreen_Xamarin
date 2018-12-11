@@ -19,13 +19,14 @@ namespace Xam_FDFullcreen
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            this.Title = "Yellow";
-            this.View.BackgroundColor = UIColor.Yellow;
+            this.Title = "Black";
+            this.View.BackgroundColor = UIColor.Black;
 
 
             UIButton button = new UIButton(UIButtonType.Custom);
             button.Frame = new CoreGraphics.CGRect(100, 300, 100, 100);
             button.SetTitle("Next", UIControlState.Normal);
+            button.SetTitleColor(UIColor.White, UIControlState.Normal);
             button.TouchUpInside += (sender, e) =>
             {
                 this.NavigationController.PushViewController(new MainViewController(), true);

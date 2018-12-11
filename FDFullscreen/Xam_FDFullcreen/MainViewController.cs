@@ -11,8 +11,8 @@ namespace Xam_FDFullcreen
             base.ViewDidLoad();
             this.Title = "Blue";
             this.View.BackgroundColor = UIColor.Blue;
-            this.NavigationController.SetNavigationBarHidden(true , false);
-            //this.SetFd_prefersNavigationBarHidden(true);
+            //this.NavigationController.SetNavigationBarHidden(true , false);
+            this.SetFd_prefersNavigationBarHidden(true);
 
             UIButton button = new UIButton();
             button.SetTitle("Next", UIControlState.Normal);
