@@ -9,7 +9,7 @@ namespace Xam_FDFullcreen
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            this.Title = "Red";
+            this.Title = "Red Page";
             this.View.BackgroundColor = UIColor.Red;
         }
 

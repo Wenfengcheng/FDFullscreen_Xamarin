@@ -11,12 +11,12 @@ namespace Xam_FDFullcreen
             base.ViewDidLoad();
             this.Title = "Blue";
             this.View.BackgroundColor = UIColor.Blue;
-            //this.NavigationController.SetNavigationBarHidden(true , false);
             this.SetFd_prefersNavigationBarHidden(true);
 
             UIButton button = new UIButton();
-            button.SetTitle("Next", UIControlState.Normal);
-            button.Frame = new CoreGraphics.CGRect(100,300,100,100);
+            button.SetTitle("To Next Page", UIControlState.Normal);
+            button.SetTitleColor(UIColor.White, UIControlState.Normal);
+            button.Frame = new CoreGraphics.CGRect((UIScreen.MainScreen.Bounds.Width - 300) / 2, (UIScreen.MainScreen.Bounds.Height - 100) / 2, 300, 100);
             button.TouchUpInside += (sender, e) =>
             {
                 this.NavigationController.PushViewController(new SecondViewController(), true);
