@@ -1,22 +1,6 @@
 ﻿using System;
-using AVFoundation;
-using CloudKit;
-using CoreAnimation;
-using CoreData;
-using CoreFoundation;
-using CoreGraphics;
-using CoreImage;
-using CoreLocation;
-using CoreVideo;
-using FileProvider;
 using Foundation;
-using IOSurface;
-using ImageIO;
-using Intents;
-using Metal;
 using ObjCRuntime;
-using OpenGLES;
-using Security;
 using UIKit;
 
 namespace FDFullscreen
@@ -57,13 +41,6 @@ namespace FDFullscreen
 
         [Export("setFd_prefersNavigationBarHidden:")]
         void SetFd_prefersNavigationBarHidden(bool hidden);
-
-        // @property (assign, nonatomic) CGFloat fd_interactivePopMaxAllowedInitialDistanceToLeftEdge;
-        [Export("fd_interactivePopMaxAllowedInitialDistanceToLeftEdge")]
-        nfloat Fd_interactivePopMaxAllowedInitialDistanceToLeftEdge();
-
-        [Export("setFd_interactivePopMaxAllowedInitialDistanceToLeftEdge:")]
-        void SetFd_interactivePopMaxAllowedInitialDistanceToLeftEdge(nfloat edge);
     }
 
 }
