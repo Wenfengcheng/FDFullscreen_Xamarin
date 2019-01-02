@@ -1,12 +1,16 @@
 # FDFullscreen_Xamarin
+[![Version Status](https://img.shields.io/cocoapods/v/FDFullscreenPopGesture.svg?style=flat)](http://cocoadocs.org/docsets/FDFullscreenPopGesture)
 
 Port to Xamarin.iOS of the [FDFullscreenPopGesture](https://github.com/forkingdog/FDFullscreenPopGesture).
 
 An UINavigationController's category to enable fullscreen pop gesture in an iOS7+ system style with AOP.
 
+## NuGet
+* [Xamarin.iOS.FDFullscreenPopGesture](https://www.nuget.org/packages/Xamarin.iOS.FDFullscreenPopGesture) [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.FDFullscreenPopGesture.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.FDFullscreenPopGesture)
+
 ## Overview
 
-![snapshot](https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot0.gif)
+<img src="https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot0.gif" height="480">
 
 ## Usage
 
@@ -34,7 +38,7 @@ It handles navigation bar transition properly when using fullscreen gesture to p
 - without bar -> with bar
 - without bar -> without bar
 
-![snapshot with bar states](https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot1.gif)
+<img src="https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot1.gif" height="480">
 
 This opmiziation is enabled by default, from now on you don't need to call **UINavigationController**'s `-setNavigationBarHidden:animated:` method, instead, use view controller's specific API to hide its bar:  
 
@@ -45,5 +49,4 @@ public override void ViewDidLoad()
     this.SetFd_prefersNavigationBarHidden(true);
 }
 ```
-
 And this property is **false** by default.
