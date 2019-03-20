@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Masonry.iOS">
+      <HintPath>..\packages\Masonry.1.1.0\lib\Xamarin.iOS\Masonry.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -100,6 +106,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -108,6 +115,23 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainViewController.cs" />
+    <Compile Include="FeedModel.cs" />
+    <Compile Include="FeedCell.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="data.json" />
+    <BundleResource Include="Resources\doge%402x.png" />
+    <BundleResource Include="Resources\dogebread.png" />
+    <BundleResource Include="Resources\forkingdog%402x.png" />
+    <BundleResource Include="Resources\phil.png" />
+    <BundleResource Include="Resources\sark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FDTemplateLayoutCell\FDTemplateLayoutCell.csproj">
+      <Project>{20EB8CE7-8EA4-4013-9018-3A67F59B9019}</Project>
+      <Name>FDTemplateLayoutCell</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
