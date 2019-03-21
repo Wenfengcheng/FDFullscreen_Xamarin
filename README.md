@@ -10,43 +10,28 @@ An UINavigationController's category to enable fullscreen pop gesture in an iOS7
 
 ## Overview
 
-<img src="https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot0.gif" height="480">
+<img src="ScreenShots/snapshot0.gif" height="480">
 
-## Usage
+## Details
 
-**AOP**, just add project reference and **no need** for any setups, all navigation controllers will be able to use fullscreen pop gesture automatically.  
+[FDFullscreen_Xamarin Sample Project](https://github.com/Wenfengcheng/FDFullscreen_Xamarin/tree/master/FDFullscreen)
 
-To disable this pop gesture of a navigation controller:  
 
-``` C#
-navigationController.Fd_fullscreenPopGestureRecognizer().Enabled = false;
-```
+# FDTemplateLayoutCell_Xamarin
 
-To disable this pop gesture of a view controller:  
+[![Version Status](https://img.shields.io/cocoapods/v/UITableView+FDTemplateLayoutCell.svg?style=flat)](http://cocoadocs.org/docsets/UITableView+FDTemplateLayoutCell )
 
-``` C#
-viewController.SetFd_interactivePopDisabled(true);
-```
+Port to Xamarin.iOS of the [FDTemplateLayoutCell](https://github.com/forkingdog/UITableView-FDTemplateLayoutCell).
 
-Require at least iOS **7.0**.
+Template auto layout cell for automatically UITableViewCell height calculating.
 
-## View Controller Based Navigation Bar Appearance
+## NuGet
+* [Xamarin.iOS.FDTemplateLayoutCell](https://www.nuget.org/packages/Xamarin.iOS.FDTemplateLayoutCell/) [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.FDTemplateLayoutCell.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.FDTemplateLayoutCell/)
 
-It handles navigation bar transition properly when using fullscreen gesture to push or pop a view controller:  
+## Overview
 
-- with bar -> without bar
-- without bar -> with bar
-- without bar -> without bar
+<img src="ScreenShots/screenshot2.gif" height="480">
 
-<img src="https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot1.gif" height="480">
+## Details
 
-This opmiziation is enabled by default, from now on you don't need to call **UINavigationController**'s `-setNavigationBarHidden:animated:` method, instead, use view controller's specific API to hide its bar:  
-
-``` C#
-public override void ViewDidLoad()
-{
-    base.ViewDidLoad();
-    this.SetFd_prefersNavigationBarHidden(true);
-}
-```
-And this property is **false** by default.
+[FDTemplateLayoutCell_Xamarin Sample Project](https://github.com/Wenfengcheng/FDFullscreen_Xamarin/tree/master/FDTemplateLayoutCell)
