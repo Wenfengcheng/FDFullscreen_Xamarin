@@ -21,13 +21,13 @@ If you have a self-satisfied cell, then all you have to do is:
 
 ```
 public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-        {
-            return this.TableView.Fd_heightForCellWithIdentifier("reuse identifer", (cell)=>{
-                // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
-                // Like:
-                // cell.entity = self.feedEntities[indexPath.row];
-            });
-        }
+{
+    return this.TableView.Fd_heightForCellWithIdentifier("reuse identifer", (cell)=>{
+        // Configure this cell with data, same as what you've done in "-tableView:cellForRowAtIndexPath:"
+        // Like:
+        // cell.entity = self.feedEntities[indexPath.row];
+    });
+}
 ```
 
 ### Height Caching API
@@ -36,20 +36,20 @@ Since iOS8, -tableView:heightForRowAtIndexPath: will be called more times than w
 
 ```
 public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-        {
-            return this.TableView.Fd_heightForCellWithIdentifier("identifer", indexPath, (cell)=>{
-                // configurations
-            });
-        }
+{
+    return this.TableView.Fd_heightForCellWithIdentifier("identifer", indexPath, (cell)=>{
+        // configurations
+    });
+}
 ```
 Or, if your entity has an unique identifier, use cache by key API:
 ```
 public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-        {
-            return this.TableView.Fd_heightForCellWithIdentifier("identifer", "unique id", (cell)=>{
-                // configurations   
-            });
-        }
+{
+    return this.TableView.Fd_heightForCellWithIdentifier("identifer", "unique id", (cell)=>{
+        // configurations   
+    });
+}
 ```
 
 ### Frame layout mode
