@@ -23,17 +23,28 @@ namespace Xam_FDFullcreen
             this.View.BackgroundColor = UIColor.Black;
 
 
-            UIButton button = new UIButton(UIButtonType.Custom)
+            UIButton button_nofd = new UIButton(UIButtonType.Custom)
             {
-                Frame = new CoreGraphics.CGRect((UIScreen.MainScreen.Bounds.Width - 100) / 2, (UIScreen.MainScreen.Bounds.Height - 100) / 2, 100, 100)
+                Frame = new CoreGraphics.CGRect((UIScreen.MainScreen.Bounds.Width - 200) / 2, (UIScreen.MainScreen.Bounds.Height - 200) / 3, 200, 100)
             };
-            button.SetTitle("Push", UIControlState.Normal);
-            button.SetTitleColor(UIColor.White, UIControlState.Normal);
-            button.TouchUpInside += (sender, e) =>
+            button_nofd.SetTitle("Without FDFullScreen", UIControlState.Normal);
+            button_nofd.SetTitleColor(UIColor.White, UIControlState.Normal);
+            button_nofd.TouchUpInside += (sender, e) =>
             {
                 this.NavigationController.PushViewController(new MainViewController(), true);
             };
+            this.View.AddSubview(button_nofd);
 
+            UIButton button = new UIButton(UIButtonType.Custom)
+            {
+                Frame = new CoreGraphics.CGRect((UIScreen.MainScreen.Bounds.Width - 200) / 2, (UIScreen.MainScreen.Bounds.Height + 100) / 3, 200, 100)
+            };
+            button.SetTitle("With FDFullScreen", UIControlState.Normal);
+            button.SetTitleColor(UIColor.White, UIControlState.Normal);
+            button.TouchUpInside += (sender, e) =>
+            {
+                this.NavigationController.PushViewController(new SecondViewController(), true);
+            };
             this.View.AddSubview(button);
             // Perform any additional setup after loading the view, typically from a nib.
         }
